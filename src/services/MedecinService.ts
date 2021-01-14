@@ -24,6 +24,10 @@ class MedecinService {
     public findByName(name: string) {
         return medecinRepository.findByName(name)
     }
+
+    public findByIdAndUpdate(id:string, medecin: any) {
+        return medecinRepository.findByIdAndUpdate(id, medecin)
+    }
 }
 
 export const medecinService = Object.freeze(new MedecinService());

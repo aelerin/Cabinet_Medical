@@ -30,6 +30,10 @@ export class MedecinRepository {
         return medecinModel.find({'nomMedecin':name});
     }
 
+    public findByIdAndUpdate(id: string, medecin: any) {
+        return medecinModel.findOneAndUpdate({'_id': id}, medecin);
+    }
+
 
 }    
 export const medecinRepository = Object.freeze(new MedecinRepository)

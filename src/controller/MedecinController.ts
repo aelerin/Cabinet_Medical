@@ -33,6 +33,17 @@ class MedecinController {
             res.json(data);
         });
     } 
+
+    public findByIdAndUpdate(req:any, res:any) {
+        const id = req.params.id;
+        const medecin = req.body
+        medecinService.findByIdAndUpdate(id, medecin).then((data:any) =>{
+            res.json(data);
+        })
+
+    }
+
+
 }
 
 export const medecinController = Object.freeze(new MedecinController())
