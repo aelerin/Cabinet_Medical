@@ -20,9 +20,9 @@ class PatientService {
         return patientRepository.deleteById(id)
     }
 
-    // public findByName(name: string) {
-    //     return patientRepository.findByName(name)
-    // }
+    public findByName(name: string) {
+        return patientRepository.findByName(name)
+    }
 }
 
 export const patientService = Object.freeze(new PatientService());

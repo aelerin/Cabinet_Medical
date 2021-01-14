@@ -24,5 +24,4 @@ class RdvController {
         })
     }
 }
-
 export const rdvController = Object.freeze(new RdvController())

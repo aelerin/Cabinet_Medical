@@ -23,12 +23,12 @@ class PatientController {
             res.json(data)
         })
     }
-    // public findByName(req: any, res: any) {
-    //     const name = req.params.name
-    //     patientService.findById(name).then((data: any) => {
-    //         res.json(data);
-    //     })
-    // }
+    public findByName(req: any, res: any) {
+        const name = req.params.name
+        patientService.findById(name).then((data: any) => {
+            res.json(data);
+        })
+    }
 }
 
 export const patientController = Object.freeze(new PatientController())

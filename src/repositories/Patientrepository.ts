@@ -26,9 +26,9 @@ export class PatientRepository{
     public deleteById(id: string) {
         return patientModel.findByIdAndDelete(id)
     }
-    // public findByName(name: string) {
-    //     return patientModel.findByName(name)
-    // }
+    public findByName(name: string) {
+        return patientModel.find({'nom':name});
+    }
 }
 
 export const patientRepository = Object.freeze(new PatientRepository)

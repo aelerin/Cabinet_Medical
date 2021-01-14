@@ -35,3 +35,8 @@
 ¨Thu Jan 14 2021 14:15:39 GMT+0100 (GMT+01:00) - /medecin/ - POST
 ¨Thu Jan 14 2021 14:15:42 GMT+0100 (GMT+01:00) - /medecin/ - GET
 ¨Thu Jan 14 2021 14:30:25 GMT+0100 (GMT+01:00) - /medecin/ - GET
+¨Thu Jan 14 2021 15:00:22 GMT+0100 (heure normale d’Europe centrale) - /medecin - GET
+¨Thu Jan 14 2021 15:00:56 GMT+0100 (heure normale d’Europe centrale) - /medecin/Raoult - GET
+¨Thu Jan 14 2021 15:02:01 GMT+0100 (heure normale d’Europe centrale) - /medecin - POST
+¨Thu Jan 14 2021 15:02:06 GMT+0100 (heure normale d’Europe centrale) - /medecin/Hector - GET
+¨Thu Jan 14 2021 15:02:11 GMT+0100 (heure normale d’Europe centrale) - /medecin - GET
