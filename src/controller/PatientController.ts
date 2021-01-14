@@ -17,12 +17,12 @@ class PatientController {
             res.json(data)
         })
     }
-    public deleteById(req: any, res: any) {
-        const id = req.params.id
-        const data = patientService.deleteById(id).then((data: any) => {
-            res.json(data)
-        })
-    }
+    // public deleteById(req: any, res: any) {
+    //     const id = req.params.id
+    //     const data = patientService.deleteById(id).then((data: any) => {
+    //         res.json(data)
+    //     })
+    // }
     // public findByName(req: any, res: any) {
     //     const name = req.params.name
     //     patientService.findById(name).then((data: any) => {

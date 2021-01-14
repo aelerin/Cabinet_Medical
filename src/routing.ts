@@ -13,7 +13,7 @@ export const setRouting = (server: any) => {
     // *Gestion medecin*
     server.get('/medecin', medecinController.findAll);
     server.post('/medecin', medecinController.save)
-    server.get('/medecin/:name', medecinController.findByName)
+    // server.get('/medecin/:name', medecinController.findByName)
     server.delete('/medecin/:id', medecinController.findById)
 
     // *Gestion des rendez-vous*

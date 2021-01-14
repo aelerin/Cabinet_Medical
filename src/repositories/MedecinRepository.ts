@@ -12,7 +12,7 @@ const medecinModel = mongoose.model('medecin', medecinSchema)
 
 export class MedecinRepository {
     public findAll() {
-        return medecinModel.find.exec()
+        return medecinModel.find().exec()
     }
 
     public findById(id: string) {
@@ -23,12 +23,12 @@ export class MedecinRepository {
     }
 
     public deleteById(id: string) {
-        return medecinModel.deleteById(id)
+        return medecinModel.findByIdAndDelete(id)
     }
 
-    public findByName(name: string) {
-        return medecinModel.findByName(name)
-    }
+    // public findByName(name: string) {
+    //     return medecinModel.findByName(name)
+    // }
 
 }
 

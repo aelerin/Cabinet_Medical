@@ -1,0 +1,5 @@
+
+¨Thu Jan 14 2021 13:40:27 GMT+0100 (GMT+01:00) - / - POST
+¨Thu Jan 14 2021 13:41:15 GMT+0100 (GMT+01:00) - /patient - POST
+¨Thu Jan 14 2021 14:01:07 GMT+0100 (GMT+01:00) - /patient - POST
+¨Thu Jan 14 2021 14:01:12 GMT+0100 (GMT+01:00) - /patient - GET

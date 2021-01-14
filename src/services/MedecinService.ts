@@ -21,9 +21,9 @@ class MedecinService {
         return medecinRepository.deleteById(id)
     }
 
-    public findByName(name: string) {
-        return medecinRepository.findByName(name)
-    }
+    // public findByName(name: string) {
+    //     return medecinRepository.findByName(name)
+    // }
 }
 
 export const medecinService = Object.freeze(new MedecinService());

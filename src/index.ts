@@ -7,7 +7,7 @@ import { setRouting } from './routing';
 const cheminLogs = './logs.txt';
 const server = express();
 
-mongoose.connect("mongodb://localhost:8082/", {      //Routing à changer
+mongoose.connect("mongodb://rsc137.fr:8082/medical", {      //Routing à changer
     poolSize: 10,
     authSource: "admin",
     user: "root",
@@ -31,6 +31,6 @@ server.use((req, res, next) => {
 
 server.use(bodyParser.json());
 
-// setRouting(server);
+setRouting(server);
 
 server.listen(3333, () => console.log('Serveur up'));
