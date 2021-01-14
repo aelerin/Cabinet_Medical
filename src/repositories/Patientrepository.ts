@@ -27,7 +27,7 @@ export class PatientRepository{
         return patientModel.findByIdAndDelete(id)
     }
     public findByName(name: string) {
-        return patientModel.find({'nom':name});
+        return patientModel.find({'name':name});
     }
 }
 

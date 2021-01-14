@@ -5,11 +5,11 @@ import { rdvController } from "./controller/RdvController";
 
 export const setRouting = (server: any) => {
     // *Gestion patient*
-    server.get('/patient', patientController.findAll);
+    server.get('/patients', patientController.findAll);
     server.post('/patient', patientController.save)
     server.get('/patient/:id', patientController.findById)
     server.delete('/patient/:id', patientController.deleteById)
-    server.get('/patient/:name', patientController.findByName)
+    server.get('/patients/:name', patientController.findByName)
 
     // *Gestion medecin*
     server.get('/medecin', medecinController.findAll);
