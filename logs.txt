@@ -40,3 +40,4 @@
 ¨Thu Jan 14 2021 15:02:01 GMT+0100 (heure normale d’Europe centrale) - /medecin - POST
 ¨Thu Jan 14 2021 15:02:06 GMT+0100 (heure normale d’Europe centrale) - /medecin/Hector - GET
 ¨Thu Jan 14 2021 15:02:11 GMT+0100 (heure normale d’Europe centrale) - /medecin - GET
+¨Thu Jan 14 2021 15:05:22 GMT+0100 (heure normale d’Europe centrale) - /patient - GET

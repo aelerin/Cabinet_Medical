@@ -25,7 +25,7 @@ class PatientController {
     }
     public findByName(req: any, res: any) {
         const name = req.params.name
-        patientService.findById(name).then((data: any) => {
+        patientService.findByName(name).then((data: any) => {
             res.json(data);
         })
     }
