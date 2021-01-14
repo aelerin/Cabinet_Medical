@@ -6,19 +6,19 @@ import { rdvController } from "./controller/RdvController";
 export const setRouting = (server: any) => {
     // *Gestion patient*
     server.get('/patients', patientController.findAll);
-    server.post('/patient', patientController.save)
-    server.put('/patient-update/:id',patientController.findByIdAndUpdate)
-    server.get('/patient/:id', patientController.findById)
+    server.get('/patients/:id', patientController.findById)
     server.get('/patient-name/:name', patientController.findByName)
-    server.delete('/patient/:id', patientController.deleteById)
-    
+    server.post('/patients', patientController.save)
+    server.put('/patients/:id',patientController.findByIdAndUpdate)
+    server.delete('/patients/:id', patientController.deleteById)
+
 
     // *Gestion medecin*
-    server.get('/medecin', medecinController.findAll);
-    server.post('/medecin', medecinController.save)
-    server.put('/medecin-update/:id',medecinController.findByIdAndUpdate)
-    server.get('/medecin/:name', medecinController.findByName)
-    server.delete('/medecin/:id', medecinController.deleteById)
+    server.get('/medecins', medecinController.findAll);
+    server.get('/medecins/:name', medecinController.findByName)
+    server.post('/medecins', medecinController.save)
+    server.put('/medecins/:id',medecinController.findByIdAndUpdate)
+    server.delete('/medecins/:id', medecinController.deleteById)
 
     // *Gestion des rendez-vous*
     // server.get('/medecin/date', rdvController.findAll);

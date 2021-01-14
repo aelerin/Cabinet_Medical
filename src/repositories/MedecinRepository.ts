@@ -18,8 +18,9 @@ export class MedecinRepository {
     public findById(id: string) {
         return medecinModel.findById(id).exec();
     }
-    public save(patient: any) {
-        return new medecinModel(patient).save();
+
+    public save(medecin: any) {
+        return new medecinModel(medecin).save();
     }
 
     public deleteById(id: string) {

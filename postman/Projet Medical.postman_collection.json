@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "b5ffbb7c-d911-43ef-8bb8-20ae18e2c3b0",
+		"name": "Projet Medical",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "medecin",
+			"item": [
+				{
+					"name": "Recuperer medecins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/medecins",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medecins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperer medecin par nom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/medecins/Gérard",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medecins",
+								"Gérard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creation de medecin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomMedecin\": \"Jean\",\r\n    \"prenomMedecin\": \"Nicot\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/medecins",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medecins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mise à jour medecin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomMedecin\": \"Nicot\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/medecins/6000c336822f985284c89fe2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medecins",
+								"6000c336822f985284c89fe2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suppression medecin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/medecins/6000c336822f985284c89fe2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"medecins",
+								"6000c336822f985284c89fe2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patient",
+			"item": [
+				{
+					"name": "Recuperer patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperer patient par id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/patients/60004210ef324b21487bbfd0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients",
+								"60004210ef324b21487bbfd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperer patient par nom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/patient-name/Michel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patient-name",
+								"Michel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creation patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"lastname\": \"lastname test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mise à jour patient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastname\": \"lastname\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/patients/6000c9c30b97ad2c24033cb6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients",
+								"6000c9c30b97ad2c24033cb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suppression patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/patients/6000c9c30b97ad2c24033cb6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patients",
+								"6000c9c30b97ad2c24033cb6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3333"
+		}
+	]
+}
