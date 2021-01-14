@@ -9,6 +9,7 @@ export const setRouting = (server: any) => {
     server.post('/patient', patientController.save)
     server.get('/patient/:id', patientController.findById)
     server.delete('/patient/:id', patientController.deleteById)
+    server.get('/patient/:name', patientController.findByName)
 
     // *Gestion medecin*
     server.get('/medecin', medecinController.findAll);
