@@ -13,7 +13,7 @@ const patientSchema = new mongoose.Schema({
 const patientModel = mongoose.model('patient', patientSchema)
 
 
-export class PatientRepository {
+export class PatientRepository{ 
     public findAll() {
         return patientModel.find().exec()
     }

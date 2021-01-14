@@ -8,13 +8,13 @@ export const setRouting = (server: any) => {
     server.get('/patient', patientController.findAll);
     server.post('/patient', patientController.save)
     server.get('/patient/:id', patientController.findById)
-    server.delete('/patient/:id', patientController.findById)
+    server.delete('/patient/:id', patientController.deleteById)
 
     // *Gestion medecin*
     server.get('/medecin', medecinController.findAll);
     server.post('/medecin', medecinController.save)
-    // server.get('/medecin/:name', medecinController.findByName)
-    server.delete('/medecin/:id', medecinController.findById)
+    server.get('/medecin/:name', medecinController.findByName)
+    server.delete('/medecin/:id', medecinController.deleteById)
 
     // *Gestion des rendez-vous*
     // server.get('/medecin/date', rdvController.findAll);

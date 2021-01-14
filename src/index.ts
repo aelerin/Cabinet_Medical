@@ -7,7 +7,7 @@ import { setRouting } from './routing';
 const cheminLogs = './logs.txt';
 const server = express();
 
-mongoose.connect("mongodb://rsc137.fr:8082/medical", {      //Routing à changer
+mongoose.connect("mongodb://rsc137.fr:8082/medical", {
     poolSize: 10,
     authSource: "admin",
     user: "root",
@@ -17,7 +17,6 @@ mongoose.connect("mongodb://rsc137.fr:8082/medical", {      //Routing à changer
     useUnifiedTopology: true
 })
 
-
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'console.error'))
@@ -25,7 +24,11 @@ db.once('open', () => console.log("Mongo a démarré avec succès"));
 
 server.use((req, res, next) => {
     let date = new Date();
-    fs.appendFileSync(cheminLogs, `\n¨${date} - ${req.url} - ${req.method}`);
+    let chaine = `\n¨${date} - ${req.url} - ${req.method}`
+    fs.appendFile(cheminLogs, chaine, (err) => {
+        if (err) throw err;
+        console.log('LOG ajouté');
+    });
     next();
 })
 
