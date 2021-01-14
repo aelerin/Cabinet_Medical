@@ -40,7 +40,6 @@ class MedecinController {
         medecinService.findByIdAndUpdate(id, medecin).then((data:any) =>{
             res.json(data);
         })
-
     }
 
 

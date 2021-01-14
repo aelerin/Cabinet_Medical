@@ -71,3 +71,5 @@
 ¨Thu Jan 14 2021 15:53:45 GMT+0100 (heure normale d’Europe centrale) - /medecin/update/60004ed9e8e9c040c8703b7e - PUT
 ¨Thu Jan 14 2021 15:53:53 GMT+0100 (heure normale d’Europe centrale) - /medecin - PUT
 ¨Thu Jan 14 2021 15:53:56 GMT+0100 (heure normale d’Europe centrale) - /medecin - GET
+¨Thu Jan 14 2021 16:04:31 GMT+0100 (heure normale d’Europe centrale) - /medecin/update/60004ed9e8e9c040c8703b7e - PUT
+¨Thu Jan 14 2021 16:04:40 GMT+0100 (heure normale d’Europe centrale) - /medecin - GET

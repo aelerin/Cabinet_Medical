@@ -23,6 +23,10 @@ class PatientService {
     public findByName(name: string) {
         return patientRepository.findByName(name)
     }
+
+    public findByIdAndUpdate(id:string, patient: any) {
+        return patientRepository.findByIdAndUpdate(id, patient)
+    }
 }
 
 export const patientService = Object.freeze(new PatientService());

@@ -2,22 +2,27 @@ import mongoose from 'mongoose'
 import { hasUncaughtExceptionCaptureCallback } from 'process'
 
 const rdvSchema = new mongoose.Schema({
-
+    dateRdv: String,
+    idCreneau: String,
+    idClients : String,
+    idMedecin: String,
+    rdvAnnule:Boolean,
 },
     {
         versionKey: false
     }
 )
 
-const rdvModel = mongoose.model('patient', rdvSchema)
+const rdvModel = mongoose.model('rdv', rdvSchema)
 
 
 export class RdvRepository {
+
     public findAll() {
         return rdvModel.find().exec()
     }
-    public save(patient: any) {
-        return new rdvModel(patient).save()
+    public save(rdv: any) {
+        return new rdvModel(rdv).save()
     }
     public findById(id: string) {
         return rdvModel.findById(id).exec()

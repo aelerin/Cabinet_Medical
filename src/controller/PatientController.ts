@@ -29,6 +29,13 @@ class PatientController {
             res.json(data);
         })
     }
+    public findByIdAndUpdate(req:any, res:any) {
+        const id = req.params.id;
+        const patient = req.body
+        patientService.findByIdAndUpdate(id, patient).then((data:any) =>{
+            res.json(data);
+        })
+    }
 }
 
 export const patientController = Object.freeze(new PatientController())

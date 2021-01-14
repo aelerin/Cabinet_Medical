@@ -29,6 +29,9 @@ export class PatientRepository{
     public findByName(name: string) {
         return patientModel.find({'name':name});
     }
+    public findByIdAndUpdate(id: string, patient: any) {
+        return patientModel.findOneAndUpdate({'_id': id}, patient);
+    }
 }
 
 export const patientRepository = Object.freeze(new PatientRepository)
