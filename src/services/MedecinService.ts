@@ -13,6 +13,7 @@ class MedecinService {
         return medecinRepository.save(medecin);
     }
 
+    
     public findById(id: string) {
         return medecinRepository.findById(id)
             .then(async (data: any) => await medecinMapping(data));
