@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import { medecinRepository } from '../repositories/MedecinRepository';
 
 
@@ -25,7 +23,7 @@ class MedecinService {
         return medecinRepository.findByName(name)
     }
 
-    public findByIdAndUpdate(id:string, medecin: any) {
+    public findByIdAndUpdate(id: string, medecin: any) {
         return medecinRepository.findByIdAndUpdate(id, medecin)
     }
 }

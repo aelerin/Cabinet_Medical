@@ -11,12 +11,14 @@ class RdvController {
             res.json(data)
         })
     }
-    // public findById(req: any, res: any) {
-    //     const id = req.params.id
-    //     const data = rdvService.findById(id).then((data: any) => {
-    //         res.json(data)
-    //     })
-    // }
+
+    public findById(req: any, res: any) {
+        const id = req.params.id
+        const data = rdvService.findById(id).then((data: any) => {
+            res.json(data)
+        })
+    }
+
     public deleteById(req: any, res: any) {
         const id = req.params.id
         const data = rdvService.deleteById(id).then((data: any) => {

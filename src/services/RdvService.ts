@@ -11,9 +11,17 @@ class RdvService {
         return rdvRepository.save(Rdv)
     }
 
-    // public findByDate(date: string) {
-    //     return rdvRepository.findByDate(date)
-    // }
+    public findByDate(date: string) {
+        return rdvRepository.findByDate(date)
+    }
+
+    public findById(id: string) {
+        return rdvRepository.findById(id)
+    }
+
+    public findByIdCrenauAndDate(idCreneau: string, date: string) {
+        return rdvRepository.findByIdCrenauAndDate(idCreneau, date)
+    }
 
     public deleteById(id: string) {
         return rdvRepository.deleteById(id)

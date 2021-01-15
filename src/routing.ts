@@ -1,6 +1,7 @@
 import { patientController } from "./controller/PatientController";
 import { medecinController } from "./controller/MedecinController";
 import { rdvController } from "./controller/RdvController";
+import { creneauController } from "./controller/CreneauController";
 
 
 export const setRouting = (server: any) => {
@@ -9,7 +10,7 @@ export const setRouting = (server: any) => {
     server.get('/patients/:id', patientController.findById)
     server.get('/patient-name/:name', patientController.findByName)
     server.post('/patients', patientController.save)
-    server.put('/patients/:id',patientController.findByIdAndUpdate)
+    server.put('/patients/:id', patientController.findByIdAndUpdate)
     server.delete('/patients/:id', patientController.deleteById)
 
 
@@ -17,7 +18,7 @@ export const setRouting = (server: any) => {
     server.get('/medecins', medecinController.findAll);
     server.get('/medecins/:name', medecinController.findByName)
     server.post('/medecins', medecinController.save)
-    server.put('/medecins/:id',medecinController.findByIdAndUpdate)
+    server.put('/medecins/:id', medecinController.findByIdAndUpdate)
     server.delete('/medecins/:id', medecinController.deleteById)
 
     // *Gestion des rendez-vous*
@@ -25,6 +26,15 @@ export const setRouting = (server: any) => {
     // server.post('/medecin/date', rdvController.save)
     // server.get('/medecin/:date', rdvController.findByDate)
     // server.delete('/medecin/date/:year:month:week:day:hour', rdvController.findByDate)
+
+    server.get('/creneaus', creneauController.findAll);
+    server.get('/creneaus/:id', creneauController.findById)
+    server.post('/creneaus', creneauController.save)
+    server.put('/creneaus/:id', creneauController.findByIdAndUpdate)
+    server.delete('/creneaus/:id', creneauController.deleteById)
+
+
+
 
 
 }

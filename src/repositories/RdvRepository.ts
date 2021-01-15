@@ -4,9 +4,9 @@ import { hasUncaughtExceptionCaptureCallback } from 'process'
 const rdvSchema = new mongoose.Schema({
     dateRdv: String,
     idCreneau: String,
-    idClients : String,
+    idClients: String,
     idMedecin: String,
-    rdvAnnule:Boolean,
+    rdvAnnule: Boolean,
 },
     {
         versionKey: false
@@ -29,6 +29,14 @@ export class RdvRepository {
     }
     public deleteById(id: string) {
         return rdvModel.findByIdAndDelete(id)
+    }
+
+    public findByDate(date: string) {
+        return rdvModel.find({ 'date': date })
+    }
+
+    public findByIdCrenauAndDate(idCCreneau: string, date: string) {
+        return rdvModel.find({ 'idCreanau': idCCreneau, 'date': date })
     }
 
 }

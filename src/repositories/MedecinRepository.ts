@@ -2,8 +2,9 @@ import mongoose from 'mongoose'
 
 const medecinSchema = new mongoose.Schema({
     nomMedecin: String,
-    prenomMedecin: String
-    // creneauMedecin : string 
+    prenomMedecin: String,
+    specialiteMedecin: String,
+    descriptionMedecin: String,
 })
 
 
@@ -28,13 +29,15 @@ export class MedecinRepository {
     }
 
     public findByName(name: string) {
-        return medecinModel.find({'nomMedecin':name});
+        return medecinModel.find({ 'nomMedecin': name });
     }
 
     public findByIdAndUpdate(id: string, medecin: any) {
-        return medecinModel.findOneAndUpdate({'_id': id}, medecin);
+        return medecinModel.findOneAndUpdate({ '_id': id }, medecin);
     }
 
-
-}    
+    public findBySpecility(specialite: string) {
+        return medecinModel.find({ 'specialiteMedecin': specialite });
+    }
+}
 export const medecinRepository = Object.freeze(new MedecinRepository)

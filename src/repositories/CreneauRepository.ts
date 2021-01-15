@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 const creneauSchema = new mongoose.Schema({
-    heure:String
+    heure: String
 })
 
 
@@ -24,14 +24,14 @@ export class CreneauRepository {
         return creneauModel.findByIdAndDelete(id);
     }
 
-    // public findByName(name: string) {
-    //     return creneauModel.find({'nomMedecin':name});
-    // }
+    public findByHour(heure: string) {
+        return creneauModel.find({ 'Heure': heure });
+    }
 
     public findByIdAndUpdate(id: string, creneau: any) {
-        return creneauModel.findOneAndUpdate({'_id': id}, creneau);
+        return creneauModel.findOneAndUpdate({ '_id': id }, creneau);
     }
 
 
-}    
+}
 export const creneauRepository = Object.freeze(new CreneauRepository)
