@@ -38,9 +38,4 @@ export const setRouting = (server: any) => {
     server.post('/creneau', creneauController.save);
     server.put('/creneau/:id', creneauController.findByIdAndUpdate);
     server.delete('/creneau/:id', creneauController.deleteById);
-
-
-
-
-
 }
