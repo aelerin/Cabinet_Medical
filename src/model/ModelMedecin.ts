@@ -15,5 +15,3 @@ export class ModelMedecin{
         this.mailMedecin = mailMedecin;
     }
 }
-
-
