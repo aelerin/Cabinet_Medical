@@ -1,12 +1,14 @@
 import mongoose from 'mongoose'
 
 const creneauSchema = new mongoose.Schema({
-    heure: String
+    heureDebut: String,
+    heureFin: String
+},
+{
+        versionKey: false
 })
 
-
 const creneauModel = mongoose.model('creneau', creneauSchema);
-
 
 export class CreneauRepository {
     public findAll() {
@@ -34,4 +36,4 @@ export class CreneauRepository {
 
 
 }
-export const creneauRepository = Object.freeze(new CreneauRepository)
+export const creneauRepository = Object.freeze(new CreneauRepository);

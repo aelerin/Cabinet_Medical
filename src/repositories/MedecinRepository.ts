@@ -5,7 +5,13 @@ const medecinSchema = new mongoose.Schema({
     prenomMedecin: String,
     specialiteMedecin: String,
     descriptionMedecin: String,
+    mailMedecin: String,
+    passwordMedecin: String,
+},
+{
+        versionKey: false
 })
+
 
 
 const medecinModel = mongoose.model('medecin', medecinSchema);
@@ -33,10 +39,10 @@ export class MedecinRepository {
     }
 
     public findByIdAndUpdate(id: string, medecin: any) {
-        return medecinModel.findOneAndUpdate({ '_id': id }, medecin);
+        return medecinModel.findOneAndUpdate({ '_id': id }, medecin ,{new: true});
     }
 
-    public findBySpecility(specialite: string) {
+    public findBySpecialty(specialite: string) {
         return medecinModel.find({ 'specialiteMedecin': specialite });
     }
 }

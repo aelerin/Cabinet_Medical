@@ -19,12 +19,16 @@ class RdvService {
         return rdvRepository.findById(id)
     }
 
-    public findByIdCrenauAndDate(idCreneau: string, date: string) {
-        return rdvRepository.findByIdCrenauAndDate(idCreneau, date)
+    public findByIdCreneauAndDate(idCreneau: string, dateRdv: string) {
+        return rdvRepository.findByIdCreneauAndDate(idCreneau, dateRdv)
     }
 
     public deleteById(id: string) {
         return rdvRepository.deleteById(id)
+    }
+
+    public findByIdAndUpdate(id: string, rdv: any) {
+        return rdvRepository.findByIdAndUpdate(id, rdv)
     }
 }
 

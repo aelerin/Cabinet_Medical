@@ -4,13 +4,13 @@ import { creneauService } from "../services/CreneauService"
 class CreneauController {
     public findAll(req: any, res: any) {
         const data = creneauService.findAll().then((data: any) => {
-            res.json(data)
+            res.json(data);
         });
     }
 
 
     public findById(req: any, res: any) {
-        const id = req.params.id
+        const id = req.params.id;
         creneauService.findById(id).then((data: any) => {
             res.json(data);
         })
@@ -31,7 +31,7 @@ class CreneauController {
 
     public findByIdAndUpdate(req: any, res: any) {
         const id = req.params.id;
-        const creneau = req.body
+        const creneau = req.body;
         creneauService.findByIdAndUpdate(id, creneau).then((data: any) => {
             res.json(data);
         })

@@ -1,11 +1,11 @@
 import { patientRepository } from '../repositories/Patientrepository';
-import fs from 'fs';
-import path from 'path';
+import { patientMapping} from '../Mapping/PatientMapping'
 
 class PatientService {
 
     public findAll() {
         return patientRepository.findAll()
+        .then(async (data: any) => await patientMapping(data));
     }
 
     public save(patient: any) {
@@ -14,6 +14,7 @@ class PatientService {
 
     public findById(id: string) {
         return patientRepository.findById(id)
+        .then(async (data: any) => await patientMapping(data));
     }
 
     public deleteById(id: string) {
@@ -22,6 +23,7 @@ class PatientService {
 
     public findByName(name: string) {
         return patientRepository.findByName(name)
+        .then(async (data: any) => await patientMapping(data));
     }
 
     public findByIdAndUpdate(id:string, patient: any) {

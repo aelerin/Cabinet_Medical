@@ -3,7 +3,7 @@ import { medecinService } from "../services/MedecinService"
 class MedecinController {
     public findAll(req: any, res: any) {
         const data = medecinService.findAll().then((data: any) => {
-            res.json(data)
+            res.json(data);
         });
     }
 
@@ -14,15 +14,23 @@ class MedecinController {
     }
 
     public findById(req: any, res: any) {
-        const id = req.params.id
-        medecinService.findById(id).then((data: any) => {
+        const id = req.params.id;
+        medecinService.findById(id)
+            .then((data: any) => {
+                res.json(data);
+            })
+    }
+
+    public findByName(req: any, res: any) {
+        const name = req.params.name;
+        medecinService.findByName(name).then((data: any) => {
             res.json(data);
         })
     }
 
-    public findByName(req: any, res: any) {
-        const name = req.params.name
-        medecinService.findByName(name).then((data: any) => {
+    public findBySpecialty(req: any, res: any) {
+        const specialite = req.params.specialite;
+        medecinService.findBySpecialty(specialite).then((data: any) => {
             res.json(data);
         })
     }
@@ -36,12 +44,11 @@ class MedecinController {
 
     public findByIdAndUpdate(req:any, res:any) {
         const id = req.params.id;
-        const medecin = req.body
+        const medecin = req.body;
         medecinService.findByIdAndUpdate(id, medecin).then((data:any) =>{
             res.json(data);
         })
     }
-
 
 }
 
