@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b5ffbb7c-d911-43ef-8bb8-20ae18e2c3b0",
+		"_postman_id": "0db94609-d991-4aae-8d14-53df24b537f0",
 		"name": "Projet Medical",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -31,13 +31,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/medecins/Gérard",
+							"raw": "{{base_url}}/medecin-name/Jean",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"medecins",
-								"Gérard"
+								"medecin-name",
+								"Jean"
 							]
 						}
 					},
@@ -50,7 +50,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nomMedecin\": \"Jean\",\r\n    \"prenomMedecin\": \"Nicot\"\r\n}",
+							"raw": "{\r\n    \"nomMedecin\": \"Albert\",\r\n    \"prenomMedecin\": \"Eis\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -76,7 +76,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nomMedecin\": \"Nicot\"\r\n}",
+							"raw": "{\r\n    \"nomMedecin\": \"Nico\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -84,13 +84,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/medecins/6000c336822f985284c89fe2",
+							"raw": "{{base_url}}/medecins/60259cc916e3265ab4b68e42",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"medecins",
-								"6000c336822f985284c89fe2"
+								"60259cc916e3265ab4b68e42"
 							]
 						}
 					},
@@ -102,13 +102,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/medecins/6000c336822f985284c89fe2",
+							"raw": "{{base_url}}/medecins/60259cc916e3265ab4b68e42",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"medecins",
-								"6000c336822f985284c89fe2"
+								"60259cc916e3265ab4b68e42"
 							]
 						}
 					},
@@ -142,13 +142,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/patients/60004210ef324b21487bbfd0",
+							"raw": "{{base_url}}/patients/60259deabda66f554c816c6e",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"patients",
-								"60004210ef324b21487bbfd0"
+								"60259deabda66f554c816c6e"
 							]
 						}
 					},
@@ -160,13 +160,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/patient-name/Michel",
+							"raw": "{{base_url}}/patient-name/Paul",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"patient-name",
-								"Michel"
+								"Paul"
 							]
 						}
 					},
@@ -179,7 +179,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"lastname\": \"lastname test\"\r\n}",
+							"raw": "{\r\n    \"nomPatient\": \"Jacques\",\r\n    \"prenomPatient\": \"Fre\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -205,7 +205,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"lastname\": \"lastname\"\r\n}",
+							"raw": "{\r\n    \"nomPatient\": \"Arthur\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -213,13 +213,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/patients/6000c9c30b97ad2c24033cb6",
+							"raw": "{{base_url}}/patients/60259deabda66f554c816c6e",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"patients",
-								"6000c9c30b97ad2c24033cb6"
+								"60259deabda66f554c816c6e"
 							]
 						}
 					},
@@ -231,13 +231,124 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/patients/6000c9c30b97ad2c24033cb6",
+							"raw": "{{base_url}}/patients/60259deabda66f554c816c6e",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"patients",
-								"6000c9c30b97ad2c24033cb6"
+								"60259deabda66f554c816c6e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "creneau",
+			"item": [
+				{
+					"name": "Recupere creneau",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/creneaux",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"creneaux"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recupere creneau par id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/creneau/60259eac6bef8237345ec09a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"creneau",
+								"60259eac6bef8237345ec09a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creation creneau",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"heureDebut\": \"09-00\",\r\n    \"heureFin\": \"10-00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/creneau",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"creneau"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mise à jour creneau",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"heureDebut\": \"17-00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/creneau/60259eac6bef8237345ec09a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"creneau",
+								"60259eac6bef8237345ec09a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supression creneau",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/creneau/60259eac6bef8237345ec09a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"creneau",
+								"60259eac6bef8237345ec09a"
 							]
 						}
 					},
@@ -269,7 +380,8 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "http://localhost:3333"
+			"value": "http://localhost:3333",
+			"disabled": true
 		}
 	]
 }

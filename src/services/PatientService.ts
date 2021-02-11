@@ -1,11 +1,19 @@
+import { ModelPatient } from './../model/ModelPatient';
 import { patientRepository } from '../repositories/Patientrepository';
 import { patientMapping} from '../Mapping/PatientMapping'
+
 
 class PatientService {
 
     public findAll() {
         return patientRepository.findAll()
-        .then(async (data: any) => await patientMapping(data));
+        .then((data: any) => {
+            let patients : ModelPatient[] = [];
+            for(let d of data){
+                patients.push(patientMapping(d))
+            }
+            return patients
+        });
     }
 
     public save(patient: any) {
@@ -23,7 +31,14 @@ class PatientService {
 
     public findByName(name: string) {
         return patientRepository.findByName(name)
-        .then(async (data: any) => await patientMapping(data));
+        // .then(async (data: any) => await patientMapping(data));
+            .then((data: any) => {
+                let patients : ModelPatient[] = [];
+                for(let d of data){
+                    patients.push(patientMapping(d))
+                }
+                return patients
+            });
     }
 
     public findByIdAndUpdate(id:string, patient: any) {
