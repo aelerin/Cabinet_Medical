@@ -1,17 +1,16 @@
 import mongoose from 'mongoose'
 
 const medecinSchema = new mongoose.Schema({
-    nomMedecin: String,
-    prenomMedecin: String,
-    specialiteMedecin: String,
-    descriptionMedecin: String,
-    mailMedecin: String,
-    passwordMedecin: String,
-},
-{
+        nomMedecin: String,
+        prenomMedecin: String,
+        specialiteMedecin: String,
+        descriptionMedecin: String,
+        mailMedecin: String,
+        passwordMedecin: String,
+    },
+    {
         versionKey: false
-})
-
+    })
 
 
 const medecinModel = mongoose.model('medecin', medecinSchema);
@@ -35,15 +34,16 @@ export class MedecinRepository {
     }
 
     public findByName(name: string) {
-        return medecinModel.find({ 'nomMedecin': name });
+        return medecinModel.find({'nomMedecin': name});
     }
 
     public findByIdAndUpdate(id: string, medecin: any) {
-        return medecinModel.findOneAndUpdate({ '_id': id }, medecin ,{new: true});
+        return medecinModel.findOneAndUpdate({'_id': id}, medecin, {new: true});
     }
 
     public findBySpecialty(specialite: string) {
-        return medecinModel.find({ 'specialiteMedecin': specialite });
+        return medecinModel.find({'specialiteMedecin': specialite});
     }
 }
+
 export const medecinRepository = Object.freeze(new MedecinRepository)

@@ -6,7 +6,13 @@ import { medecinMapping} from '../Mapping/MedecinMapping'
 class MedecinService {
     public findAll() {
         return medecinRepository.findAll()
-            .then(async (data: any) => await medecinMapping(data));
+            .then((data: any) => {
+                let medecins: ModelMedecin[] = []; 
+                for (let d of data) {
+                    medecins.push(medecinMapping(d));
+                }
+                return medecins;
+            });
     }
 
     public save(medecin: any) {
@@ -16,7 +22,7 @@ class MedecinService {
     
     public findById(id: string) {
         return medecinRepository.findById(id)
-            .then(async (data: any) => await medecinMapping(data));
+            .then((data: any) => medecinMapping(data));
     }
 
     public deleteById(id: string) {
@@ -25,7 +31,13 @@ class MedecinService {
 
     public findByName(name: string) {
         return medecinRepository.findByName(name)
-        .then(async (data: any) => await medecinMapping(data));
+        .then((data: any) => {
+            let medecins : ModelMedecin[] = [];
+            for(let d of data){
+                medecins.push(medecinMapping(d));
+            }
+            return medecins
+        });
     }
 
     public findByIdAndUpdate(id: string, medecin: any) {
@@ -34,7 +46,14 @@ class MedecinService {
 
     public findBySpecialty(specialite: string) {
         return medecinRepository.findBySpecialty(specialite)
-        .then(async (data: any) => await medecinMapping(data));
+        // .then(async (data: any) => await medecinMapping(data));
+            .then((data: any) => {
+                let medecins : ModelMedecin[] = [];
+                for(let d of data){
+                    medecins.push(medecinMapping(d));
+                }
+                return medecins
+            });
     }
 }
 
